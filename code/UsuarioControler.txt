@@ -1,0 +1,43 @@
+using MySql.Data.MySqlClient;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ChatEco
+{
+    public class UsuarioControler
+    {
+        public List<Usuario> ListarUsuarios()
+        {
+            string Configuracao = "server=localhost; user id=root; password=chat2017; database=chat";
+            MySqlConnection Conexao = new MySqlConnection(Configuracao);
+            try
+            {
+                List<Usuario> lstUsuario = new List<Usuario>();
+                string sql = $@"SELECT * FROM usuario";
+                MySqlCommand Comando = new MySqlCommand();
+                Comando.Connection = Conexao;
+                Comando.CommandText = sql;
+                Conexao.Open();
+                MySqlDataReader dtreader = Comando.ExecuteReader();
+                
+                while (dtreader.Read())
+                {
+                    lstUsuario.Add(new Usuario {
+                       Nome = dtreader["nome"].ToString(),
+                       
+                    });
+                }
+                Conexao.Close();
+
+                return lstUsuario;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+        }
+    }
+}

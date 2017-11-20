@@ -1,0 +1,107 @@
+using System;
+using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+using System.Security.Cryptography;
+
+namespace ChatEco
+{
+    public partial class Login : Form
+    {
+        public Login()
+        {
+            InitializeComponent();
+        }
+
+        private void Usuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Fundo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LinkLabel_Cadas_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Cadastro objeto = new Cadastro(this);
+            objeto.Show();
+
+            this.Hide();
+
+
+        }
+
+        private void txt_SenhaL_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                
+            }
+
+        }
+
+        private void Btn_Login_Click(object sender, EventArgs e)
+        {
+            string Configuracao = "server=localhost; user id=root; password=chat2017; database=chat";
+            MySqlConnection Conexao = new MySqlConnection(Configuracao);
+            try
+            {
+
+                txt_User.Enabled = true;
+                txt_SenhaL.Enabled = true;
+                btn_Login.Enabled = true;
+                string senhaquevemdobanco = "";
+                string senhaDigitada = "";
+                string sql = $@"SELECT * FROM usuario where email = '{txt_User.Text}'";
+                MySqlCommand Comando = new MySqlCommand();
+                Comando.Connection = Conexao;
+                Comando.CommandText = sql;
+                Conexao.Open();
+                MySqlDataReader dtreader = Comando.ExecuteReader();
+                while (dtreader.Read())
+                {
+                    senhaquevemdobanco = dtreader["senha"].ToString();
+                }
+                using (MD5 md5Hash = MD5.Create())
+                {
+                    senhaDigitada = MD5Util.GetMd5Hash(md5Hash, txt_SenhaL.Text);
+                }
+                if (senhaquevemdobanco.Equals(senhaDigitada))
+                {
+                    using (var dlg = new MainForm())
+                    {
+                        dlg.StartPosition = FormStartPosition.Manual;
+                        dlg.Location = this.Location;
+                        dlg.FormClosing += (s, ea) => this.Show();    // <=== Here
+                        this.Hide();
+                        dlg.ShowDialog();
+                    }
+                }
+
+                else
+                {
+                    MessageBox.Show("Erro de Login");
+                }
+
+                Conexao.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+                MessageBox.Show("MySQL Nao Conectado!", "ERRO DE CONEXAO");
+            }
+        }
+    
+    }
+}

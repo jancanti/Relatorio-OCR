@@ -1,0 +1,67 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ChatEco
+{
+    public partial class Settings : Form
+    {
+        String username;       
+        String IP_address;      
+
+        public Settings()
+        {
+            InitializeComponent();
+        }
+
+        public Settings(String name, String address)
+        {
+            InitializeComponent();
+            inputName.Text = username = name;           
+            inputAddress.Text = IP_address = address;   
+        }
+
+        
+        public String GetName()
+        {
+            return username;
+        }
+
+        
+        public String GetAddress()
+        {
+            return IP_address;
+        }
+
+        
+        private void buttonOK_Click(object sender, EventArgs e)
+        {
+            username = inputName.Text;
+            IP_address = inputAddress.Text;
+            this.Close();
+        }
+
+        
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void inputName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Settings_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
+

@@ -1,0 +1,53 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Net;
+using System.Net.Sockets;
+
+namespace ChatEco
+{
+    class Listener
+    {
+        private List<String> query;     
+        private Socket handler;         
+        
+        public Boolean Connected { get { return handler.Connected;} }
+        
+        
+        public Listener(Socket socket, List<String> stringList)
+        {
+            handler = socket; 
+            query = stringList;
+        }
+
+        public void Run()
+        {
+            
+            while (handler.Connected)
+            {
+                try
+                {
+                    byte[] bytes = new Byte[1024];
+
+                   
+                    int bytesRecv = handler.Receive(bytes);
+
+                    
+                    query.Add(Encoding.ASCII.GetString(bytes, 0, bytesRecv));
+                }
+                catch (SocketException)
+                {
+                    using (System.IO.StreamWriter dataFile = new System.IO.StreamWriter("log.txt", true))
+                    {
+                        dataFile.WriteLine(DateTime.Now + " | Disconnected\n");
+                    }
+                }
+            }
+        }
+
+
+    }
+}
+

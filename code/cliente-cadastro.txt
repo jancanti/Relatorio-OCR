@@ -1,0 +1,95 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+using System.Security.Cryptography;
+
+namespace ChatEco
+{
+    public partial class Cadastro : Form
+    {
+        Login log;
+        public Cadastro(Login login)
+        {
+            InitializeComponent();
+
+            log = login;
+
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            log.Show();
+
+            Close();
+
+        }
+
+        private void Cadastro_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            log.Show();
+        }
+
+        private void btn_Login_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if ( (!txtBox_Usu.Text.Equals("")) & (!txt_senha1.Text.Equals("")))
+                {
+                    string Configuracao = "server=localhost; user id=root; password=chat2017; database=chat";
+                    MySqlConnection Conexao = new MySqlConnection(Configuracao);
+
+                    Conexao.Open();
+                    MySqlCommand INSERT = new MySqlCommand("INSERT INTO usuario (email, senha) VALUES (@user, @pass)", Conexao);
+                    string hash = "";
+                    using (MD5 md5Hash = MD5.Create())
+                    {
+                        hash = MD5Util.GetMd5Hash(md5Hash, txt_senha1.Text);
+                    
+                    }
+                    INSERT.Parameters.AddWithValue("@pass", hash);
+                    INSERT.Parameters.AddWithValue("@user", txtBox_Usu.Text);
+                    
+               
+                    INSERT.ExecuteNonQuery();
+                    Conexao.Close();
+
+                    MessageBox.Show("Cadastro Inserido Com Sucesso");
+                }
+                else
+                {
+                    MessageBox.Show("Preencha todo formulario");
+                }
+            }
+
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+                MessageBox.Show("MySQL Nao Conectado!", "ERRO DE CONEXAO");
+            }
+
+            
+
+
+            }
+
+        private void txt_senha1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                
+            }
+        }
+    }
+}

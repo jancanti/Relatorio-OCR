@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.11.20)  20 NOV 2017 17:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.11.20)  20 NOV 2017 17:01
 entering extended mode
-**./00_main.tex
-(00_main.tex
+**./aps5semestre-cc.tex
+(aps5semestre-cc.tex
 LaTeX2e <2017-04-15>
 Babel <3.15> and hyphenation patterns for 75 language(s) loaded.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
@@ -478,10 +478,9 @@ File: pdftex.def 2017/06/24 v1.0g Graphics/color driver for pdftex
 Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
 \c@lips@count=\count100
 )
-(00_main.aux (01_capa.aux) (02_indice.aux) (03_objetivo.aux) (04_introducao.aux
-) (05_fundamentos.aux) (06_plano.aux) (07_projeto.aux) (08_codigo.aux)
-(09_programa.aux) (10_bibliografia.aux))
-\openout1 = `00_main.aux'.
+(aps5semestre-cc.aux (capa.aux) (sumario.aux) (objetivo.aux) (introducao.aux)
+(fundamentos.aux) (plano.aux) (projeto.aux) (codigo.aux) (bibliografia.aux))
+\openout1 = `aps5semestre-cc.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
 LaTeX Font Info:    ... okay on input line 31.
@@ -596,61 +595,343 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-\openout2 = `01_capa.aux'.
+\openout2 = `capa.aux'.
 
-
-(01_capa.tex
+ (capa.tex
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 8.
 ) [1
 
 
 {C:/Users/Daniel/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-\openout2 = `02_indice.aux'.
+\openout2 = `sumario.aux'.
 
 
-No file 02_indice.tex.
-\openout2 = `03_objetivo.aux'.
+(sumario.tex
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <17.28> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 1.
+ (aps5semestre-cc.toc
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 2.
+LaTeX Font Info:    Try loading font information for U+msa on input line 5.
 
-No file 03_objetivo.tex.
-\openout2 = `04_introducao.aux'.
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 5.
 
-No file 04_introducao.tex.
-\openout2 = `05_fundamentos.aux'.
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
+\tf@toc=\write3
+\openout3 = `aps5semestre-cc.toc'.
 
-No file 05_fundamentos.tex.
-\openout2 = `06_plano.aux'.
+) [2
 
-No file 06_plano.tex.
-\openout2 = `07_projeto.aux'.
 
-No file 07_projeto.tex.
-\openout2 = `08_codigo.aux'.
+]
+\openout2 = `objetivo.aux'.
 
-No file 08_codigo.tex.
-\openout2 = `09_programa.aux'.
+ (objetivo.tex
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 6.
+) [3
 
-No file 09_programa.tex.
-\openout2 = `10_bibliografia.aux'.
 
-No file 10_bibliografia.tex.
-(00_main.aux (01_capa.aux) (02_indice.aux) (03_objetivo.aux) (04_introducao.aux
-) (05_fundamentos.aux) (06_plano.aux) (07_projeto.aux) (08_codigo.aux)
-(09_programa.aux) (10_bibliografia.aux)) ) 
+]
+\openout2 = `introducao.aux'.
+
+ (introducao.tex
+
+Package natbib Warning: Citation `napsol2010' on page 4 undefined on input line
+ 2.
+
+[4
+
+
+]) [5]
+\openout2 = `fundamentos.aux'.
+
+ (fundamentos.tex
+
+Package natbib Warning: Citation `gallo2003comunicaccao' undefined on input lin
+e 2.
+
+
+Package natbib Warning: Citation `forouzan2009comunicaccao' on page 6 undefined
+ on input line 9.
+
+
+Package natbib Warning: Citation `morimoto2006' on page 6 undefined on input li
+ne 12.
+
+[6
+
+
+] [7]
+
+Package natbib Warning: Citation `ross2009redes' on page 8 undefined on input l
+ine 26.
+
+
+Package natbib Warning: Citation `farias2006essncial' on page 8 undefined on in
+put line 35.
+
+<img/estrela.jpg, id=27, 150.5625pt x 150.5625pt>
+File: img/estrela.jpg Graphic file (type jpg)
+<use img/estrela.jpg>
+Package pdftex.def Info: img/estrela.jpg  used on input line 42. on input line 
+42.
+Package pdftex.def Info: Requested size: 150.56212pt x 150.56212pt on input lin
+e 42.
+
+Overfull \hbox (0.11151pt too wide) in paragraph at lines 39--46
+[]\T1/phv/m/n/12 Neste tipo de rede, existe um nó cen-tral (nor-mal-mente um hu
+b ou switch)
+ []
+
+[8]
+<img/laco.jpg, id=31, 150.5625pt x 150.5625pt>
+File: img/laco.jpg Graphic file (type jpg)
+<use img/laco.jpg>
+Package pdftex.def Info: img/laco.jpg  used on input line 49. on input line 49.
+
+Package pdftex.def Info: Requested size: 150.56212pt x 150.56212pt on input lin
+e 49.
+<img/arvore.jpg, id=32, 150.5625pt x 150.5625pt>
+File: img/arvore.jpg Graphic file (type jpg)
+<use img/arvore.jpg>
+Package pdftex.def Info: img/arvore.jpg  used on input line 56. on input line 5
+6.
+Package pdftex.def Info: Requested size: 150.56212pt x 150.56212pt on input lin
+e 56.
+ [9 <./img/estrela.jpg> <./img/laco.jpg>]
+<img/barramento.jpg, id=36, 150.5625pt x 40.15pt>
+File: img/barramento.jpg Graphic file (type jpg)
+<use img/barramento.jpg>
+Package pdftex.def Info: img/barramento.jpg  used on input line 66. on input li
+ne 66.
+Package pdftex.def Info: Requested size: 150.56212pt x 40.14989pt on input line
+ 66.
+
+
+Package natbib Warning: Citation `torres2015redes' on page 10 undefined on inpu
+t line 70.
+
+[10 <./img/arvore.jpg> <./img/barramento.jpg>]
+Overfull \hbox (29.63252pt too wide) in paragraph at lines 89--90
+[]\T1/phv/m/n/12 é res-pon-sá-vel por or-ga-ni-zar os da-dos re-ce-bi-dos, colo
+cando-
+ []
+
+[11]) [12]
+\openout2 = `plano.aux'.
+
+ (plano.tex) [13
+
+
+]
+\openout2 = `projeto.aux'.
+
+ (projeto.tex
+<img/t-conectar.jpeg, id=50, 698.61pt x 526.96875pt>
+File: img/t-conectar.jpeg Graphic file (type jpg)
+<use img/t-conectar.jpeg>
+Package pdftex.def Info: img/t-conectar.jpeg  used on input line 8. on input li
+ne 8.
+Package pdftex.def Info: Requested size: 279.43904pt x 210.78375pt on input lin
+e 8.
+<img/t-login.jpeg, id=51, 700.6175pt x 523.9575pt>
+File: img/t-login.jpeg Graphic file (type jpg)
+<use img/t-login.jpeg>
+Package pdftex.def Info: img/t-login.jpeg  used on input line 15. on input line
+ 15.
+Package pdftex.def Info: Requested size: 280.24203pt x 209.57928pt on input lin
+e 15.
+<img/t-pag-cadastro.jpeg, id=52, 700.6175pt x 529.98pt>
+File: img/t-pag-cadastro.jpeg Graphic file (type jpg)
+<use img/t-pag-cadastro.jpeg>
+Package pdftex.def Info: img/t-pag-cadastro.jpeg  used on input line 22. on inp
+ut line 22.
+Package pdftex.def Info: Requested size: 280.24203pt x 211.98824pt on input lin
+e 22.
+<img/t-cadastro-sucesso.jpeg, id=53, 702.625pt x 522.95375pt>
+File: img/t-cadastro-sucesso.jpeg Graphic file (type jpg)
+<use img/t-cadastro-sucesso.jpeg>
+Package pdftex.def Info: img/t-cadastro-sucesso.jpeg  used on input line 29. on
+ input line 29.
+Package pdftex.def Info: Requested size: 281.04501pt x 209.1778pt on input line
+ 29.
+<img/t-rodando.jpeg, id=54, 627.34375pt x 486.81876pt>
+File: img/t-rodando.jpeg Graphic file (type jpg)
+<use img/t-rodando.jpeg>
+Package pdftex.def Info: img/t-rodando.jpeg  used on input line 36. on input li
+ne 36.
+Package pdftex.def Info: Requested size: 250.93304pt x 194.72404pt on input lin
+e 36.
+<img/t-msg-enviada.jpeg, id=55, 624.3325pt x 482.80376pt>
+File: img/t-msg-enviada.jpeg Graphic file (type jpg)
+<use img/t-msg-enviada.jpeg>
+Package pdftex.def Info: img/t-msg-enviada.jpeg  used on input line 43. on inpu
+t line 43.
+Package pdftex.def Info: Requested size: 249.72858pt x 193.11807pt on input lin
+e 43.
+<img/t-log-server.jpeg, id=56, 873.2625pt x 451.6875pt>
+File: img/t-log-server.jpeg Graphic file (type jpg)
+<use img/t-log-server.jpeg>
+Package pdftex.def Info: img/t-log-server.jpeg  used on input line 50. on input
+ line 50.
+Package pdftex.def Info: Requested size: 349.29881pt x 180.67178pt on input lin
+e 50.
+<img/t-banco-senha-cripto.jpeg, id=57, 1284.8pt x 803.0pt>
+File: img/t-banco-senha-cripto.jpeg Graphic file (type jpg)
+<use img/t-banco-senha-cripto.jpeg>
+Package pdftex.def Info: img/t-banco-senha-cripto.jpeg  used on input line 57. 
+on input line 57.
+Package pdftex.def Info: Requested size: 321.19922pt x 200.74951pt on input lin
+e 57.
+) [14
+
+
+ <./img/t-conectar.jpeg> <./img/t-login.jpeg>]
+
+LaTeX Warning: Text page 15 contains only floats.
+
+[15 <./img/t-pag-cadastro.jpeg> <./img/t-cadastro-sucesso.jpeg> <./img/t-rodand
+o.jpeg>] [16 <./img/t-msg-enviada.jpeg> <./img/t-log-server.jpeg> <./img/t-banc
+o-senha-cripto.jpeg>]
+\openout2 = `codigo.aux'.
+
+ (codigo.tex (code/Servidor-Classe-Program.txt
+Overfull \hbox (43.96097pt too wide) in paragraph at lines 43--45
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[17
+
+
+]) (code/Servidor-Classe-QueryReader.txt [18]) (code/Servidor-Classe-TCP.txt [1
+9] [20]) (code/Servidor-Transferencia-Program.txt) (code/Usuario.txt)
+[21] (code/UsuarioControler.txt
+Overfull \hbox (29.56082pt too wide) in paragraph at lines 14--15
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+phv on input line 19.
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsphv.fd"
+File: omsphv.fd 
+)
+LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <8> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 19.
+)
+(code/cliente-cadastro.txt [22]
+Overfull \hbox (67.96121pt too wide) in paragraph at lines 50--51
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (159.16214pt too wide) in paragraph at lines 54--55
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[23]) (code/cliente-chat.txt [24] [25]
+Overfull \hbox (29.56082pt too wide) in paragraph at lines 71--73
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (29.56082pt too wide) in paragraph at lines 96--97
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (29.56082pt too wide) in paragraph at lines 104--105
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[26]
+Overfull \hbox (29.56082pt too wide) in paragraph at lines 133--134
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (29.56082pt too wide) in paragraph at lines 141--142
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[27]
+Overfull \hbox (0.76053pt too wide) in paragraph at lines 196--198
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[28] [29]) (code/cliente-configuracoes.txt [30])
+(code/cliente-enviar-arquivo.txt
+Overfull \hbox (5.56058pt too wide) in paragraph at lines 19--20
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (115.9617pt too wide) in paragraph at lines 20--22
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[31]
+Overfull \hbox (34.36087pt too wide) in paragraph at lines 34--35
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (39.16092pt too wide) in paragraph at lines 53--54
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+) (code/cliente-listeners.txt [32]
+Overfull \hbox (48.76102pt too wide) in paragraph at lines 42--43
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+) (code/cliente-login.txt [33]
+Overfull \hbox (5.56058pt too wide) in paragraph at lines 35--36
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (29.56082pt too wide) in paragraph at lines 56--57
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[34]) (code/cliente-main-chat.txt [35]) (code/cliente-md5.txt [36])) [37]
+\openout2 = `bibliografia.aux'.
+
+
+(bibliografia.tex
+No file aps5semestre-cc.bbl.
+) [38
+
+
+]
+
+Package natbib Warning: There were undefined citations.
+
+(aps5semestre-cc.aux (capa.aux) (sumario.aux) (objetivo.aux) (introducao.aux)
+(fundamentos.aux) (plano.aux) (projeto.aux) (codigo.aux) (bibliografia.aux)) ) 
 Here is how much of TeX's memory you used:
- 5006 strings out of 493312
- 67348 string characters out of 3138895
- 238380 words of memory out of 3000000
- 8424 multiletter control sequences out of 15000+200000
- 16102 words of font info for 24 fonts, out of 3000000 for 9000
+ 5494 strings out of 493312
+ 73857 string characters out of 3138895
+ 265200 words of memory out of 3000000
+ 8807 multiletter control sequences out of 15000+200000
+ 37086 words of font info for 55 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,4n,32p,276b,219s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/en
-c/dvips/base/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8
-a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on 00_main.pdf (1 page, 20076 bytes).
+ 41i,6n,32p,984b,1547s stack positions out of 5000i,500n,10000p,200000b,50000s
+{
+C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/h
+elvetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8
+a.pfb>
+Output written on aps5semestre-cc.pdf (38 pages, 642342 bytes).
 PDF statistics:
- 15 PDF objects out of 1000 (max. 8388607)
+ 155 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 

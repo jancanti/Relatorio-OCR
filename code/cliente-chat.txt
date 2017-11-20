@@ -1,0 +1,277 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Windows.Forms;
+using System.Net;
+using System.Net.Sockets;
+using System.Threading.Tasks;
+using A6;
+
+namespace ChatEco
+{
+    public partial class MainForm : Form
+    {
+        private int port = 01337;       
+
+        String username;        
+        String IPAddress;       
+        Boolean connected;      
+
+        Socket sender;          
+
+        Listener listener;      
+        Thread t;               
+
+        List<String> messageQuery = new List<String>();    
+        List<String> fileQuery = new List<String>();
+
+        public MainForm()
+        {
+            InitializeComponent();
+            username = "noname";
+            IPAddress = "127.0.0.1";
+
+            connected = false;
+            connectionLabel.Text = "Disconnected";
+
+            
+            sendButton.Enabled = false;                 
+            
+
+            getSettings();
+            connect();      
+        }
+
+        private void informationMenuItem_Click(object sender, EventArgs e)
+        {
+            getSettings();
+        }
+
+        private void getSettings()
+        {
+            Settings settingWindow = new Settings(username, IPAddress);     
+            settingWindow.ShowDialog();                                  
+            
+            username = settingWindow.GetName();                             
+            IPAddress = settingWindow.GetAddress();
+        }
+
+        private void connect()
+        {
+            try
+            {
+                System.IO.File.AppendAllText("log.txt", "");        
+
+                
+                sender = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+                
+                sender.Connect(IPAddress, port);
+                sendMsg(username + " connected");
+
+                
+                listener = new Listener(sender, messageQuery);
+                t = new Thread(new ThreadStart(listener.Run));
+                t.Start();
+
+                
+                MainTimer.Start();
+
+                
+                connected = true;
+
+                sendButton.Enabled = true;
+                sendButton.BackColor = Color.LightGreen;
+
+                connectionLabel.Text = "Connected to " + sender.RemoteEndPoint.ToString();
+                errorLabel.Text = "";
+            }
+            catch (SocketException se)
+            {
+                errorLabel.Text = "Socket Error";
+                using (System.IO.StreamWriter dataFile = new System.IO.StreamWriter("log.txt", true))
+                {
+                    dataFile.WriteLine(DateTime.Now + " | " + se.ToString() + '\n');
+                }
+            }
+            catch (Exception e)
+            {
+                errorLabel.Text = "Unexcpected Error";
+                using (System.IO.StreamWriter dataFile = new System.IO.StreamWriter("log.txt", true))
+                {
+                    dataFile.WriteLine(DateTime.Now + " | " + e.ToString() + '\n');
+                }
+            }
+        }
+
+        private void disconnect()
+        {
+            try
+            {
+                
+                sendMsg(username + " disconnected");
+                sender.Shutdown(SocketShutdown.Both);
+                sender.Close();
+
+                
+                MainTimer.Stop();
+
+                
+                connected = false;
+                sendButton.Enabled = false;
+                sendButton.BackColor = Color.LightGray;
+                connectionLabel.Text = "Disconnected";
+                errorLabel.Text = "";
+            }
+            catch (SocketException se)
+            {
+                errorLabel.Text = "Socket Error";
+                using (System.IO.StreamWriter dataFile = new System.IO.StreamWriter("log.txt", true))
+                {
+                    dataFile.WriteLine(DateTime.Now + " | " + se.ToString() + '\n');
+                }
+            }
+            catch (Exception e)
+            {
+                errorLabel.Text = "Unexcpected Error";
+                using (System.IO.StreamWriter dataFile = new System.IO.StreamWriter("log.txt", true))
+                {
+                    dataFile.WriteLine(DateTime.Now + " | " + e.ToString() + '\n');
+                }
+            }
+        }
+
+        private void sendMsg(String data)
+        {
+            
+            byte[] msg = Encoding.ASCII.GetBytes(data);
+
+            
+            int bytesSent = sender.Send(msg);
+        }
+
+        private void connectMenuItem_Click(object sender, EventArgs e)
+        {
+            if (connected == false)
+            {
+                connect();      
+            }
+        }
+
+        private void disconnectMenuItem_Click(object sender, EventArgs e)
+        {
+            if (connected == true)
+            {
+                disconnect();   
+            }
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (connected == true)
+            {
+                disconnect();   
+            }
+        }
+
+        private void sendButton_Click(object sender, EventArgs e)
+        {
+            sendMsg(username + " : " + inputBox.Text + "\n");              
+            inputBox.Text = "";     
+        }
+
+        private void MainTimer_Tick(object sender, EventArgs e)
+        {
+            if (messageQuery.Count > 0)     
+            {
+                if (messageQuery[0].Contains("-/File$"))
+                {
+                    string[] splited = messageQuery[0].Split('$');
+                    string x = splited[1].Replace("\n","");
+                    ClientWebDownload(x);
+                    messageList.Items.Add($"Voce Recebeu o arquivo {splited[1]} em C:/Upload");
+
+                }
+                else
+                {
+                    messageList.Items.Add(messageQuery[0] + '\n');
+                }
+                
+               
+
+                
+                messageQuery.RemoveAt(0);
+            }
+
+            if (connected == true)
+            {
+                
+                if (listener.Connected == false)
+                {
+                    
+                    disconnect();
+                }
+            }
+
+
+            if (fileQuery.Count > 0)
+            {
+                sendMsg("-/File$" + fileQuery[0] + "\n");
+                fileQuery.RemoveAt(0);
+              
+
+            }
+
+        }
+
+        private void ClientWebDownload(string fileName)
+        {
+            try
+            {
+                string remoteUri = "http://" + IPAddress + "/chat/";
+                string myStringWebResource = remoteUri + fileName;
+                WebClient myWebClient = new WebClient();
+                myWebClient.DownloadFile(myStringWebResource, @"C:/Upload/" + fileName);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                throw;
+            }
+            
+        }
+
+        private void exitMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();     
+        }
+
+        private void aboutMenuItem_Click(object sender, EventArgs e)
+        {
+            
+            AboutBox about = new AboutBox();
+            about.ShowDialog();
+        }
+
+        private void btnAnexo_Click(object sender, EventArgs e)
+        {
+            
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                EnviarArquivo.Enviaranexo(openFileDialog1.FileName, IPAddress);
+                fileQuery.Add(EnviarArquivo.mensagemCliente);
+            }
+        }  
+
+        private void sendButton_Click_1(object sender, EventArgs e)
+        {
+            sendMsg(username + " : " + inputBox.Text + "\n");              
+            inputBox.Text = "";     
+        }
+    }
+}
