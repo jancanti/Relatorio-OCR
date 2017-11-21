@@ -1,0 +1,19 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\astroncite{Mantas}{1986}]{man1986pattern}
+Mantas, J. (1986).
+\newblock An overview of character recognition methodologies.
+
+\bibitem[\protect\astroncite{Osorio}{1991}]{osorio1991estudo}
+Osorio, F.~S. (1991).
+\newblock Um estudo sobre reconhecimento visual de caracteres atrav{\'e}s de
+  redes neurais.
+
+\bibitem[\protect\astroncite{Silva}{2003}]{silva2003reconhecimento}
+Silva, Eug{\^e}nio e~Thom{\'e}, A. (2003).
+\newblock Reconhecimento de caracteres manuscritos utilizando time de redes
+  neurais.
+\newblock In {\em Congresso da Sociedade Brasileira de Computa{\c{c}}{\~a}o,
+  XXIII}, pages 1--8.
+
+\end{thebibliography}
