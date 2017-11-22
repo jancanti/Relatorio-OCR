@@ -6,7 +6,8 @@
 \contentsline {subsection}{\numberline {3.2}Tipos de Sistemas de Reconhecimento de Caracteres}{7}
 \contentsline {subsection}{\numberline {3.3}Descri\IeC {\c c}\IeC {\~a}o dos Sistemas OCR}{7}
 \contentsline {subsubsection}{\numberline {3.3.1}Etapas de Processamento}{8}
-\contentsline {subsubsection}{\numberline {3.3.2}T\IeC {\'e}cnicas de Reconhecimento}{8}
+\contentsline {subsubsection}{\numberline {3.3.2}T\IeC {\'e}cnicas de Reconhecimento}{9}
+\contentsline {subsubsection}{\numberline {3.3.3}Avalia\IeC {\c c}\IeC {\~a}o do Reconheimento}{9}
 \contentsline {section}{\numberline {4}Plano de desenvolvimento da aplica\IeC {\c c}\IeC {\~a}o}{10}
 \contentsline {section}{\numberline {5}Projeto}{12}
 \contentsline {section}{\numberline {6}C\IeC {\'o}digo fonte}{15}

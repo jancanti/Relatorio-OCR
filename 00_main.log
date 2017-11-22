@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.11.20)  20 NOV 2017 23:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.11.20)  21 NOV 2017 19:48
 entering extended mode
 **./00_main.tex
 (00_main.tex
@@ -688,19 +688,11 @@ Package pdftex.def Info: img/etapas-de-processamento.jpg  used on input line 40
 . on input line 40.
 Package pdftex.def Info: Requested size: 294.09802pt x 194.72702pt on input lin
 e 40.
-File: img/etapas-de-processamento.jpg Graphic file (type jpg)
-<use img/etapas-de-processamento.jpg>
-Package pdftex.def Info: img/etapas-de-processamento.jpg  used on input line 41
-. on input line 41.
-Package pdftex.def Info: Requested size: 294.09802pt x 194.72702pt on input lin
-e 41.
-File: img/etapas-de-processamento.jpg Graphic file (type jpg)
-<use img/etapas-de-processamento.jpg>
-Package pdftex.def Info: img/etapas-de-processamento.jpg  used on input line 42
-. on input line 42.
-Package pdftex.def Info: Requested size: 294.09802pt x 194.72702pt on input lin
-e 42.
-) [8] [9 <./img/etapas-de-processamento.jpg>]
+ [8 <./img/etapas-de-processamento.jpg>]
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 52.
+)
+[9]
 \openout2 = `06_plano.aux'.
 
  (06_plano.tex) [10
@@ -790,10 +782,7 @@ LaTeX Font Info:    Font shape `OMS/phv/m/it' in size <6> not available
 [29]
 \openout2 = `09_bibliografia.aux'.
 
- (09_bibliografia.tex (00_main.bbl
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 16.
-)) [30
+ (09_bibliografia.tex (00_main.bbl)) [30
 
 
 ] (00_main.aux (01_capa.aux)
@@ -817,7 +806,7 @@ KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9
 pe1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvet
 ic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb
 >
-Output written on 00_main.pdf (30 pages, 239605 bytes).
+Output written on 00_main.pdf (30 pages, 240668 bytes).
 PDF statistics:
  121 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

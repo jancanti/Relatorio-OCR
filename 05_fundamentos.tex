@@ -48,8 +48,18 @@ Segundo \cite{silva2003reconhecimento}, os sistemas de reconhecimento ótico de 
 		
 		\subsubsection{Técnicas de Reconhecimento}
 		Existem diferentes técnicas empregadas no reconhecimento de padrões, mas estas podem ser classificadas em três grandes categorias, técnicas baseadas em:
-		\begin{itemize}
-			\item Atributos globais
-			\item Distribuição de pontos e atributos geométricos
-			\item Topológicos
-		\end{itemize}
+		\begin{description}
+			\item \textbf{Atributos globais}: Nesta categoria, os atributos (features) são extraídos de cada ponto interior ao retângulo que circunscreve a matriz do caractere a qual também pode ser denominado de \textit{frame}. Os atributos empregados não refletem nenhuma propriedade local, geométrica ou topológica do próprio traçado. Algumas dessas técnicas foram desenvolvidas originalmente para reconhecer apenas caracteres impressos.
+			\item \textbf{Distribuição de pontos}: É uma outra forma de reduzir a dimensionalidade dos conjuntos de atributos, onde estes são derivados a partir das distribuições estatísticas dos pontos. Diferentes tipos de distribuições tem sido utilizadas correspondendo a diferentes técnicas de reconhecimento.
+			\item \textbf{Atributos geométricos e topológicos}: Esta técnica é baseada na extração de atributos que descrevem a geometria ou topologia de interesse no traçado do caractere. Estes atributos podem representar propriedades locais. Esta é de longe a mais popular técnica estudada pelos pesquisadores. 
+		\end{description}
+	
+		\subsubsection{Avaliação do Reconheimento}
+		O contexto também pode ser utilizado em uma fase
+		de pré-processamento onde, antes mesmo de iniciar o
+		reconhecimento do padrão, já se possui uma lista de
+		prováveis candidatos ao reconhecimento. Com into, 6 reduzido
+		o espaço de soluções possiveis, facilitando o reconhecimento
+		e diminuindo a possibilidade de ocorrência de erros. No
+		entanto, a forma mais empregada em relação ao use de
+		contexto, o pós-processamento.
