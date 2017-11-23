@@ -11,6 +11,5 @@
 \contentsline {subsection}{\numberline {3.4}Redes Neurais}{10}
 \contentsline {subsubsection}{\numberline {3.4.1}Caracter\IeC {\'\i }sticas e Aplica\IeC {\c c}\IeC {\~o}es das Redes Neurais}{10}
 \contentsline {section}{\numberline {4}Plano de desenvolvimento da aplica\IeC {\c c}\IeC {\~a}o}{12}
-\contentsline {section}{\numberline {5}Projeto}{14}
-\contentsline {section}{\numberline {6}C\IeC {\'o}digo fonte}{17}
-\contentsline {section}{\numberline {7}Bibliografia}{32}
+\contentsline {section}{\numberline {5}C\IeC {\'o}digo fonte}{14}
+\contentsline {section}{\numberline {6}Bibliografia}{29}
