@@ -1,8 +1,24 @@
 \begin{thebibliography}{}
 
+\bibitem[\protect\astroncite{Erpen}{2004}]{erpen2004reconhecimento}
+Erpen, L. R.~C. (2004).
+\newblock Reconhecimento de padroes em imagens por descritores de forma.
+
+\bibitem[\protect\astroncite{Koerich}{2004}]{koerich2004reconhecimento}
+Koerich, A.~L. (2004).
+\newblock Reconhecimento de palavras manuscritas usando modelos de markov.
+\newblock {\em Revista IEEE Am{\'e}rica Latina}, 2:132--141.
+
 \bibitem[\protect\astroncite{Mantas}{1986}]{man1986pattern}
 Mantas, J. (1986).
 \newblock An overview of character recognition methodologies.
+
+\bibitem[\protect\astroncite{Nunes}{2004}]{nunes2004seleccao}
+Nunes, C.~M. (2004).
+\newblock {\em Sele{\c{c}}{\~a}o de primitivas utilizando algoritmo Subida na
+  Encosta otimizado em problemas de Reconhecimento de caracteres}.
+\newblock PhD thesis, Disserta{\c{c}}{\~a}o de Mestrado apresentada ao Programa
+  de P{\'o}s-Gradua{\c{c}}{\~a}o da Universidade Cat{\'o}lica do Paran{\'a}.
 
 \bibitem[\protect\astroncite{Osorio}{1991}]{osorio1991estudo}
 Osorio, F.~S. (1991).

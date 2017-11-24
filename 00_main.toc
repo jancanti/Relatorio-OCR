@@ -10,6 +10,6 @@
 \contentsline {subsubsection}{\numberline {3.3.3}Avalia\IeC {\c c}\IeC {\~a}o do Reconheimento}{9}
 \contentsline {subsection}{\numberline {3.4}Redes Neurais}{10}
 \contentsline {subsubsection}{\numberline {3.4.1}Caracter\IeC {\'\i }sticas e Aplica\IeC {\c c}\IeC {\~o}es das Redes Neurais}{10}
-\contentsline {section}{\numberline {4}Plano de desenvolvimento da aplica\IeC {\c c}\IeC {\~a}o}{12}
-\contentsline {section}{\numberline {5}C\IeC {\'o}digo fonte}{14}
-\contentsline {section}{\numberline {6}Bibliografia}{29}
+\contentsline {section}{\numberline {4}Plano de desenvolvimento}{12}
+\contentsline {section}{\numberline {5}C\IeC {\'o}digo fonte}{16}
+\contentsline {section}{\numberline {6}Bibliografia}{31}
